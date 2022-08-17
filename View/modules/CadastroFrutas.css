@@ -1,35 +1,64 @@
 #descricao{
     width: 100%;
-    padding: 12px 20px;
-    margin: auto;
+    padding: 4% 0.09%;
     box-sizing: border-box;
     border-radius: 5px;
+    position: relative;
+    left: auto;
+    bottom: 38px;
 }
+
+#descricao label{
+    position: relative;
+    left: auto;
+    bottom: 34px;
+}
+
+#botao{
+    position: relative;
+    left: 35%;
+    bottom: 38px;
+}
+
+
 #nome{
     width: 100%;
-    padding: 6px 20px;
-    margin: auto;
-    box-sizing: border-box;
-    border-radius: 5px;
-}
-#tipo{
-    width: 100%;
-    padding: 6px 20px;
-    margin: auto;
+    padding: 2% 0.09%;
     box-sizing: border-box;
     border-radius: 5px;
 }
 
+#tipo{
+    margin:auto;    
+}
+
+#usuario{
+    width: 80%;
+    position: relative;
+    left: 20%;
+    bottom: 35px;
+}
+
+#usuario label{
+    position: relative;
+    left: 20%;
+    bottom: 34px;
+}
 
 #form form {
-    width: fit-content;
-    margin: auto;
+    width:fit-content;
+    
     border-radius: 5px;
-    background-color: #f2f2f2;
+    background-color:  rgb(167, 208, 224);opacity:0.9;
     padding: 20px;
+    position: relative;
+    left: 38%;
+    top: 75px;
+    
 }
 
 body{
     background-image: url("https://images2.alphacoders.com/103/thumb-1920-1033411.jpg");
     background-size: 100%;
 }
+

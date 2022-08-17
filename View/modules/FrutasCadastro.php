@@ -14,50 +14,47 @@
 
 <body>
     <div id="form">
-        <form action="/Frutas_do_diabo/save" method="post">
+        <form action="/Frutas_do_diabo/save" method="post" >
             <!-- Fazendo o formulario -->
 
             <div id="cadastro" class="form-floating mb-3">
-            <legend>Cadastro de Akumas no mi</legend>
-            <input type="hidden" value="<?= $model->id ?>" name="id" />
-            </div>
-
-            <div id="nome" class="form-text">
-                <input name="nome" id="nome" type="text" placeholder="Nome:"/>
+                <center>
+                    <legend>Cadastro de Akumas no mi</legend>
+                    <input type="hidden" value="<?= $model->id ?>" name="id" />
+                </center>    
             </div>
             
+            <div id="nome" class="col-md-6">
+              <label for="name" class="form-label">Nome:</label>
+              <input type="text" name="nome" id="nome" class="form-control">
+            </div>
 
-            <br>
-
-            <div id="tipo" class="form-text">
-                <label for="tipos">Tipo da fruta:</label>
-                <select name="tipos" id="tipos">
-                    <option value="lo">Logia</option>
-                    <option value="pa">Paramecia</option>
-                    <option value="zo">Zoan</option>
+            
+            <div id="tipos" class="col-md-4">
+                <label for="tipos" class="form-label">Tipo da fruta</label>
+                <select id="tipos" class="form-select">
+                <option selected>Zoan</option>
+                <option>Paramecia</option>
+                <option>Logia</option>
                 </select>
             </div>
 
-            <br>
-
-            <div id="usuario" class="form-text">
-                <label for="usuario">Usuário da fruta:</label>
-                <input name="usuario" id="usuario" type="text" />
+            <div id="usuario" class="col-md-4">
+                <label for="usuario" class="form-label">Usúario:</label>
+                <input type="text" class="form-control" id="usuario" name="usuario">
             </div>
 
-            <br>
-            <br>
-
-            <div id="descricao" class="form-text">
-                <label for="descricao"><strong>descrição:</strong></label>
-                <input name="descricao" id="descricao" type="text" />
+            <div id="descricao" class="col-12">
+                <label for="descricao" class="form-label">descrição:</label>
+                <input type="text" class="form-control" id="descricao" name="descricao">
             </div>
 
-            <br>
-
-            <button type="submit">Enviar</button>
+            <div id="botao" class="col-12">
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </div>
         </form>
     </div>
+    
     <?php include "./View/includes/js_config.php"; ?>
 </body>
 
