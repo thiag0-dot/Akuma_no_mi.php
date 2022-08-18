@@ -29,19 +29,21 @@
 }
 
 #tipo{
-    margin:auto;    
+    margin:auto;  
+    box-sizing: border-box;
+    
 }
 
 #usuario{
-    width: 80%;
+    width: 75%;
     position: relative;
-    left: 20%;
+    left: 25%;
     bottom: 35px;
 }
 
 #usuario label{
     position: relative;
-    left: 20%;
+    left: 25%;
     bottom: 34px;
 }
 
@@ -49,10 +51,10 @@
     width:fit-content;
     
     border-radius: 5px;
-    background-color:  rgb(167, 208, 224);opacity:0.9;
+    background-color:  rgba(167, 208, 224, .3);
     padding: 20px;
     position: relative;
-    left: 38%;
+    margin: auto;
     top: 75px;
     
 }
