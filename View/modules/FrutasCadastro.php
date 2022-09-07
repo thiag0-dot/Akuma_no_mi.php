@@ -36,7 +36,9 @@
                 <option selected>Zoan</option>
                 <option>Paramecia</option>
                 <option>Logia</option>
+                <input type="text" name="tipos" id="tipos" class="form-control">
                 </select>
+                
             </div>
 
             <div id="usuario" class="col-md-4">

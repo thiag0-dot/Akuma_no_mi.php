@@ -38,7 +38,7 @@
             </td>
 
             <td><?= $item->nome ?></td>
-            <td><?= $item->tipo ?></td>
+            <td><?= $item->tipos ?></td>
             <td><?= $item->usuario ?></td>
             <td><?= $item->descricao ?></td>
         </tr>

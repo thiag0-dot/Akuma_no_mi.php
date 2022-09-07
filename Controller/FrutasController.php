@@ -1,5 +1,9 @@
 <?php
 
+namespace AKUMA_NO_MI\Controller;
+
+use AKUMA_NO_MI\Model\FrutasModel;
+
 class FrutasController
 {
     public static function index()

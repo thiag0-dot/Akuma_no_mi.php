@@ -1,5 +1,10 @@
 <?php 
 
+namespace Frutas\DAO;
+
+use AKUMA_NO_MI\DAO\MYSQL;
+use AKUMA_NO_MI\Model\FrutasModel;
+
 class FrutasDAO
 {
     private $conexao;
@@ -13,14 +18,14 @@ class FrutasDAO
 
     public function insert(FrutasModel $model)
     {
-        $sql = "INSERT INTO Frutas 
+        $sql = "INSERT INTO frutas 
                 (nome, tipo, usuario, descricao)
                 VALUES
                 (?, ?, ?, ?) ";
 
         $stmt = $this->conexao->prepare($sql);
         $stmt->bindValue(1, $model->nome);
-        $stmt->bindValue(2, $model->tipo);
+        $stmt->bindValue(2, $model->tipos);
         $stmt->bindValue(3, $model->usuario);
         $stmt->bindValue(4, $model->descricao);
         $stmt->execute();
@@ -28,11 +33,11 @@ class FrutasDAO
 
     public function update(FrutasModel $model)
     {
-        $sql = "UPDATE Frutas SET nome=?, tipo=?, usuario=?, descricao=? WHERE id=? ";
+        $sql = "UPDATE frutas SET nome=?, tipo=?, usuario=?, descricao=? WHERE id=? ";
 
         $stmt = $this->conexao->prepare($sql);
         $stmt->bindValue(1, $model->nome);
-        $stmt->bindValue(2, $model->tipo);
+        $stmt->bindValue(2, $model->tipos);
         $stmt->bindValue(3, $model->usuario);
         $stmt->bindValue(4, $model->descricao);
         $stmt->bindValue(3, $model->id);
@@ -41,7 +46,7 @@ class FrutasDAO
     
     public function select()
     {
-        $sql = "SELECT * FROM Frutas";
+        $sql = "SELECT * FROM frutas";
 
         $stmt = $this->conexao->prepare($sql);
         $stmt->execute();
@@ -53,7 +58,7 @@ class FrutasDAO
     {
         include_once 'Model/FrutasModel.php';
 
-        $sql = "SELECT * FROM Frutas WHERE id = ?";
+        $sql = "SELECT * FROM frutas WHERE id = ?";
 
         $stmt = $this->conexao->prepare($sql);
         $stmt->bindValue(1, $id);
@@ -64,7 +69,7 @@ class FrutasDAO
 
     public function delete(int $id)
     {
-        $sql = "DELETE FROM Frutas WHERE id = ?";
+        $sql = "DELETE FROM frutas WHERE id = ?";
 
         $stmt = $this->conexao->prepare($sql);
         $stmt->bindValue(1, $id);

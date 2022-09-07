@@ -1,8 +1,12 @@
 <?php
 
+namespace AKUMA_NO_MI\Model;
+
+use AKUMA_NO_MI\DAO\FrutasDAO;
+
 class FrutasModel
 {
-    public $id, $nome, $tipos, $usuario, $descricao;
+    public $id, $nome, $tipos, $usuario, $descricao, $rows;
 
     public function save()
     {
