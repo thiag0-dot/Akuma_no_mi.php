@@ -6,12 +6,12 @@ use \PDO;
 
 class Mysql extends PDO
 {
-    public $dsn = "mysql:host=localhost:3306;dbname=db_fruta";
+    public $dsn = "mysql:host=localhost:3307;dbname=db_fruta";
     public $user = "root";
-    public $pass = "thiagodev";
+    public $pass = "etecjau";
 
     public function __construct()
     {
         return parent::__construct($this->dsn, $this->user, $this->pass);
     }
-}
+} 

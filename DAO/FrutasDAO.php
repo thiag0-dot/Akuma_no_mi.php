@@ -1,9 +1,10 @@
 <?php 
 
-namespace Frutas\DAO;
+namespace AKUMA_NO_MI\DAO;
 
 use AKUMA_NO_MI\DAO\MYSQL;
 use AKUMA_NO_MI\Model\FrutasModel;
+use \PDO;
 
 class FrutasDAO
 {
@@ -40,7 +41,7 @@ class FrutasDAO
         $stmt->bindValue(2, $model->tipos);
         $stmt->bindValue(3, $model->usuario);
         $stmt->bindValue(4, $model->descricao);
-        $stmt->bindValue(3, $model->id);
+        $stmt->bindValue(5, $model->id);
         $stmt->execute();
     }
     
@@ -64,7 +65,7 @@ class FrutasDAO
         $stmt->bindValue(1, $id);
         $stmt->execute();
 
-        return $stmt->fetchObject("FrutasModel");
+        return $stmt->fetchObject();
     }
 
     public function delete(int $id)

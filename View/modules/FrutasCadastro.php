@@ -32,11 +32,10 @@
             
             <div id="tipos" class="col-md-4">
                 <label for="tipos" class="form-label">Tipo da fruta</label>
-                <select id="tipos" class="form-select">
+                <select name="tipos" id="tipos" class="form-select">
                 <option selected>Zoan</option>
                 <option>Paramecia</option>
                 <option>Logia</option>
-                <input type="text" name="tipos" id="tipos" class="form-control">
                 </select>
                 
             </div>
