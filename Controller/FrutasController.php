@@ -23,6 +23,9 @@ class FrutasController
 
         if(isset($_GET['id']))
             $model = $model->getById( (int) $_GET['id']);
+
+        $model->getAllTipos(); 
+           
         include 'View/modules/Frutascadastro.php';
     }
 

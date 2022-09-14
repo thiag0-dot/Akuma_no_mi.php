@@ -32,10 +32,11 @@
             
             <div id="tipos" class="col-md-4">
                 <label for="tipos" class="form-label">Tipo da fruta</label>
+
                 <select name="tipos" id="tipos" class="form-select">
-                <option selected>Zoan</option>
-                <option>Paramecia</option>
-                <option>Logia</option>
+                    <?php foreach($model->lista_tipos as $tipos):?>
+                        <option value="<?= $tipos->id?>"><?= $tipos->descricao?></option>
+                    <?php endforeach?>
                 </select>
                 
             </div>

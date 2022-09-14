@@ -26,4 +26,46 @@ class TipoDAO{
         $stmt->bindValue(1, $model->descricao);
         $stmt->execute();
     }
+
+    public function update(TipoModel $model)
+    {
+        $sql = "UPDATE Tipos SET descricao=? WHERE id=? ";
+
+        $stmt = $this->conexao->prepare($sql);
+        $stmt->bindValue(1, $model->descricao);
+        $stmt->bindValue(5, $model->id);
+        $stmt->execute();
+    }
+
+    public function select()
+    {
+        $sql = "SELECT * FROM Tipos";
+
+        $stmt = $this->conexao->prepare($sql);
+        $stmt->execute();
+
+        return $stmt->fetchAll(PDO::FETCH_CLASS);
+    }
+
+    public function selectById(int $id)
+    {
+        include_once 'Model/TipoModel.php';
+
+        $sql = "SELECT * FROM Tipos WHERE id = ?";
+
+        $stmt = $this->conexao->prepare($sql);
+        $stmt->bindValue(1, $id);
+        $stmt->execute();
+
+        return $stmt->fetchObject();
+    }
+
+    public function delete(int $id)
+    {
+        $sql = "DELETE FROM Tipos WHERE id = ?";
+
+        $stmt = $this->conexao->prepare($sql);
+        $stmt->bindValue(1, $id);
+        $stmt->execute();
+    }
 }

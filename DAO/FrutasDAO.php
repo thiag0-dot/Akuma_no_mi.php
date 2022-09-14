@@ -20,7 +20,7 @@ class FrutasDAO
     public function insert(FrutasModel $model)
     {
         $sql = "INSERT INTO frutas 
-                (nome, tipo, usuario, descricao)
+                (nome, id_tipos, usuario, descricao)
                 VALUES
                 (?, ?, ?, ?) ";
 
@@ -34,7 +34,7 @@ class FrutasDAO
 
     public function update(FrutasModel $model)
     {
-        $sql = "UPDATE frutas SET nome=?, tipo=?, usuario=?, descricao=? WHERE id=? ";
+        $sql = "UPDATE frutas SET nome=?, id_tipos=?, usuario=?, descricao=? WHERE id=? ";
 
         $stmt = $this->conexao->prepare($sql);
         $stmt->bindValue(1, $model->nome);
@@ -48,6 +48,7 @@ class FrutasDAO
     public function select()
     {
         $sql = "SELECT * FROM frutas";
+        
 
         $stmt = $this->conexao->prepare($sql);
         $stmt->execute();

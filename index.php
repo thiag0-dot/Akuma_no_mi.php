@@ -3,6 +3,7 @@
 $uri_parse = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
 include 'Controller/FrutasController.php';
+include 'Controller/TipoController.php';
 
 use AKUMA_NO_MI\Controller\FrutasController;
 use AKUMA_NO_MI\Controller\TipoController;
@@ -26,23 +27,23 @@ switch($uri_parse)
     break;
 
     ##Tipos
-    case '\Tipo':
+    case '/Tipo':
         TipoController::index();
     break;
 
-    case '\Tipo\form':
+    case '/Tipo/form':
         TipoController::form();
     break;
 
-    case '\Tipo\save':
+    case '/Tipo/save':
         TipoController::save();
     break;
 
-    case 'Tipo\delete':
+    case '/Tipo/delete':
         TipoController::delete();
     break;
     
     default:
-        echo "erro 404";
+        echo "erro 4045";
     break;
 }
