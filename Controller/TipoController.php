@@ -11,6 +11,8 @@ class TipoController{
         $model = new TipoModel();
         $model->getAllRows();
 
+    
+
         include 'View/modules/TipoListar.php';
     }
 

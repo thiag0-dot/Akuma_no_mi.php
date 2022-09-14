@@ -47,7 +47,9 @@ class FrutasDAO
     
     public function select()
     {
-        $sql = "SELECT * FROM frutas";
+        $sql = "SELECT f.id, f.nome, t.descricao AS tipos, f.usuario, f.descricao
+                FROM frutas f
+                JOIN tipos t ON (t.id = f.id_tipos)";
         
 
         $stmt = $this->conexao->prepare($sql);

@@ -33,7 +33,7 @@ class TipoDAO{
 
         $stmt = $this->conexao->prepare($sql);
         $stmt->bindValue(1, $model->descricao);
-        $stmt->bindValue(5, $model->id);
+        $stmt->bindValue(2, $model->id);
         $stmt->execute();
     }
 

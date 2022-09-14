@@ -3,6 +3,7 @@
 namespace AKUMA_NO_MI\Controller;
 
 use AKUMA_NO_MI\Model\FrutasModel;
+use AKUMA_NO_MI\Model\TipoModel;
 
 class FrutasController
 {
@@ -19,12 +20,19 @@ class FrutasController
     public static function form()
     {
         include 'Model/FrutasModel.php';
+        include 'Model/TipoModel.php';
+
         $model = new FrutasModel();
 
-        if(isset($_GET['id']))
+        if(isset($_GET['id'])){ 
             $model = $model->getById( (int) $_GET['id']);
+        }
 
-        $model->getAllTipos(); 
+        $model_tipos = new TipoModel();
+        $model_tipos->getAllRows();
+
+        $model->lista_tipos = $model_tipos->rows;
+            
            
         include 'View/modules/Frutascadastro.php';
     }

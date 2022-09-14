@@ -38,7 +38,7 @@
                         <a href="/Frutas_do_diabo/form?id=<?= $item->id ?>"><?= $item->nome ?></a>
                     </td>
 
-                    <td><?= $item->$tipos?></td>
+                    <td><?= $item->tipos ?></td>
                     <td><?= $item->usuario ?></td>
                     <td><?= $item->descricao ?></td>
                 </tr>
