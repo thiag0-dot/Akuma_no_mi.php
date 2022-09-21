@@ -5,11 +5,10 @@ namespace AKUMA_NO_MI\Controller;
 use AKUMA_NO_MI\Model\FrutasModel;
 use AKUMA_NO_MI\Model\TipoModel;
 
-class FrutasController
+class FrutasController extends Controller
 {
     public static function index()
-    {
-        include 'Model/FrutasModel.php';
+    {      
 
         $model = new FrutasModel();
         $model->getAllRows();
@@ -19,9 +18,6 @@ class FrutasController
 
     public static function form()
     {
-        include 'Model/FrutasModel.php';
-        include 'Model/TipoModel.php';
-
         $model = new FrutasModel();
 
         if(isset($_GET['id'])){ 
@@ -39,7 +35,6 @@ class FrutasController
 
     public static function save()
     {
-        include 'Model/FrutasModel.php';
 
         $Frutas = new FrutasModel();
         $Frutas->id = $_POST['id'];
@@ -54,7 +49,6 @@ class FrutasController
 
     public static function delete()
     {
-        include 'Model/FrutasModel.php';
 
         $delete = new FrutasModel();
 

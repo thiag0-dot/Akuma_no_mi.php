@@ -2,7 +2,7 @@
 
 spl_autoload_register(function($class)
 {
-    $arquivo_classe = dirname(__FILE__,2) . '/' . $class . ".php";
+    $arquivo_classe = BASEDIR . '/' . $class . ".php";
 
     if(file_exists($arquivo_classe))
         include $arquivo_classe;

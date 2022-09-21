@@ -3,22 +3,18 @@
 namespace AKUMA_NO_MI\Controller;
 use AKUMA_NO_MI\Model\TipoModel;
 
-class TipoController{
+class TipoController extends Controller
+{
     public static function index()
     {
-        include 'Model/TipoModel.php';
-
         $model = new TipoModel();
         $model->getAllRows();
-
-    
 
         include 'View/modules/TipoListar.php';
     }
 
     public static function form()
     {
-        include 'Model/TipoModel.php';
         $model = new TipoModel();
 
         if(isset($_GET['id']))
@@ -28,8 +24,6 @@ class TipoController{
 
     public static function save()
     {
-        include 'Model/TipoModel.php';
-
         $tipo = new TipoModel();
         $tipo->id = $_POST['id'];
         $tipo->descricao = $_POST['descricao'];
@@ -40,8 +34,6 @@ class TipoController{
 
     public static function delete()
     {
-        include 'Model/TipoModel.php';
-
         $delete = new TipoModel();
 
         $delete->delete((int) $_GET['id']);

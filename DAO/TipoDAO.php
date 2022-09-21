@@ -57,7 +57,7 @@ class TipoDAO{
         $stmt->bindValue(1, $id);
         $stmt->execute();
 
-        return $stmt->fetchObject();
+        return $stmt->fetchObject("AKUMA_NO_MI\Model\TipoModel");
     }
 
     public function delete(int $id)

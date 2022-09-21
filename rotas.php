@@ -1,12 +1,13 @@
 <?php 
 
+use AKUMA_NO_MI\Controller\{
+    FrutasController,
+    TipoController,
+};
+
+
 $uri_parse = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
-include 'Controller/FrutasController.php';
-include 'Controller/TipoController.php';
-
-use AKUMA_NO_MI\Controller\FrutasController;
-use AKUMA_NO_MI\Controller\TipoController;
 
 switch($uri_parse)
 {
@@ -44,6 +45,6 @@ switch($uri_parse)
     break;
     
     default:
-        echo "erro 4045";
+        echo "erro 404";
     break;
 }
